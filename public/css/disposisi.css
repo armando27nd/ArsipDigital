@@ -1,0 +1,138 @@
+body {
+            font-family: 'Times New Roman', Times, serif;
+            /* font-size: 1pt; */
+            line-height: 1.5;
+            /* FIX: Added flex properties for centering */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            min-height: 100vh;
+            margin: 5vh auto
+            /* margin-left: 12; */
+            /* background-color: #f0f0f0; Added for screen view distinction */
+        }
+
+        .container {
+            width: 120%;
+            max-width: 750px;
+            /* margin: auto; */
+            background-color: white;
+        }
+
+        .card-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        .card-table td {
+            padding: 5px 12px;
+            vertical-align: top;
+        }
+
+        /* --- Header --- */
+        .header-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16pt;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        /* --- Info Section --- */
+        .info-left {
+            font-size: 14pt;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .info-right {
+            text-align: justify;
+            font-weight: bold;
+            text-indent: 10px;
+            padding-left: 220px;
+            /* margin-ri: 50vh; */
+            /* padding-top: 10px; */
+            /* padding-bottom: 10px; */
+        }
+        /* --- Detail Section --- */
+        .detail-row td{
+            border-top: 1px solid black;
+            font-weight: bold;
+            padding-top: 8px;
+            /* padding-bottom: 8px; */
+        }
+        .detail-label {
+            font-weight: bold;
+            width: 140px;
+        }
+        .detail-colon {
+            font-weight: bold;
+            width: 10px;
+        }
+
+        /* --- Instruction Section --- */
+
+        .instruction-table {
+            width: 100%;
+            height: 250px;
+        }
+        .instruction-table td {
+            font-weight: bold;
+            width: 50%;
+            /* padding: 10px; */
+        }
+        .instruction-header {
+            text-align: center;
+            font-weight: bold;
+            border-top: 1px solid black;
+
+            /* text-decoration: underline; */
+        }
+
+        .instruction-header-left{
+            border-right: 1px solid
+        }
+
+        .instruction-content-left {
+            border-right: 1px solid black;
+        }
+
+        /* --- Footer Section --- */
+        .footer-row td {
+            padding: 0;
+            font-size: 12pt;
+        }
+        .footer-table {
+            /* border-top: 1px solid black; */
+            width: 100%;
+        }
+        .footer-table td {
+            border-top: 1px solid black;
+            width: 50%;
+            padding: 0;
+        }
+        .footer-kiri{
+            border-right: 1px solid black;
+            padding: 0;
+        }
+
+        /* --- Print Settings --- */
+        @media print {
+            @page {
+                size: portrait;
+                margin-left: 12;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                margin: 0;
+                background-color: transparent; /* Make background transparent for printing */
+                min-height: 0; /* Reset min-height for print */
+            }
+            .container {
+                /* Add margin directly to the container for print spacing */
+                margin: 0.5cm 10vh;
+                /* margin */
+            }
+        }

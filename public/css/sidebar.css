@@ -1,0 +1,47 @@
+/* Custom CSS untuk Sidebar */
+/* Custom CSS untuk Logo Sidebar */
+.brand-link .brand-image {
+    background-color: transparent !important; /* Menghilangkan warna latar belakang */
+    border: none !important; /* Menghilangkan border jika ada */
+    box-shadow: none !important; /* Menghilangkan bayangan jika ada (override elevation-3) */
+}
+
+/* Jika Anda ingin memastikan logo tidak bulat atau ada padding tak terlihat */
+.brand-link img {
+    border-radius: 0 !important; /* Pastikan tidak ada border-radius (tidak bulat) */
+    padding: 0 !important; /* Hapus padding internal jika ada */
+}
+
+
+/* Latar belakang sidebar */
+.main-sidebar, .sidebar-dark-primary { /* Menargetkan elemen sidebar dan tema dark primary jika masih ada */
+    background-color: #2f5ef8 !important; /* Warna biru gelap mirip SB Admin */
+    color: #f8f9fa !important; /* Warna teks menu agar terlihat di latar belakang gelap */
+}
+
+/* Warna teks default untuk item menu */
+.nav-sidebar .nav-item .nav-link p,
+.nav-sidebar .nav-item .nav-link i {
+    color: #ffffff !important; /* Teks menu menjadi putih */
+}
+
+/* Warna ikon */
+.nav-sidebar .nav-icon {
+    color: #ffffff  !important; /* Ikon menu menjadi putih */
+}
+
+/* Warna menu aktif */
+.nav-sidebar > .nav-item > .nav-link.active {
+    color: #aa8a8a7e !important; /* Teks aktif tetap putih */
+}
+
+/* Warna hover untuk menu (opsional) */
+.nav-sidebar .nav-item .nav-link:hover:not(.active) {
+    background-color: rgba(66, 161, 250, 0.596) !important; /* Sedikit transparan putih saat hover */
+    color: #ffffff !important;
+}
+
+/* Jika ada teks "Brand" di logo */
+.brand-link .brand-text {
+    color: #ffffff !important;
+}

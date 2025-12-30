@@ -1,0 +1,28 @@
+/* Styles for printing the preview area */
+@media print {
+    /* Hide everything on the page by default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Make the print-area and everything inside it visible */
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+
+    /* Position the print-area to fill the entire page */
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ensure the container inside the print area uses the full width */
+    #print-area .container {
+        max-width: 100%;
+        margin: 1cm; /* Add margin for the actual print */
+    }
+}

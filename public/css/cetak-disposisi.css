@@ -1,0 +1,114 @@
+        /* CSS Umum */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pengaturan Cetak untuk A4 Portrait */
+        @page {
+            size: A4 portrait;
+            margin: 15mm; /* Margins untuk cetakan */
+        }
+
+        /* Kontainer Utama */
+        .container-disposisi {
+            width: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 210mm; /* Lebar A4 */
+            box-sizing: border-box;
+            border: 2px solid #000;
+            padding: 10px;
+            margin: 0 auto; /* Tengah di halaman */
+        }
+
+        /* Gaya Kop Surat */
+        .header-kop {
+           display: flex; /* Menggunakan flexbox untuk penataan */
+            align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            position: relative; /* Penting untuk positioning logo secara absolut */
+            padding-left: 90px; /* Memberi ruang di kiri untuk logo */
+        }
+        .header-kop h2, .header-kop h3 {
+            margin: 0;
+        }
+        .header-kop p {
+            margin: 2px 0;
+            font-size: 10px; /* Ukuran font lebih kecil untuk kop surat agar muat */
+        }
+
+        .logo-kop{
+            max-width: 70px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+            height: auto;
+            position: absolute; /* Memposisikan logo secara absolut */
+            left: 0; /* Dari kiri container-kop */
+            top: 50%; /* Dari tengah container-kop secara vertikal */
+            transform: translateY(-50%); /* Menggeser logo ke atas setengah tingginya sendiri untuk senter yang sempurna */
+            margin-left: 10px; /* Sedikit jarak dari tepi kiri */
+        }
+
+        .header-text{
+            lex-grow: 1; /* Memungkinkan teks untuk mengisi ruang yang tersisa */
+            text-align: center; /* Menengahkan teks di dalam area header-text */
+        }
+
+         /* Pastikan teks kop tetap di tengah dalam flex item-nya */
+        .header-text h2, .header-text h3, .header-text p {
+            text-align: center;
+        }
+
+
+        /* Judul Disposisi */
+        .judul-disposisi {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        /* Tabel Informasi Surat */
+        .table-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        .table-info td {
+            padding: 5px 0;
+            border: 1px solid #000;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        /* Tabel Sifat dan Instruksi */
+        .table-sifat, .table-instruksi, .table-catatan {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-sifat td, .table-instruksi td, .table-catatan td {
+            border: 1px solid #000;
+            padding: 8px;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        .table-sifat td.title {
+            width: 150px;
+            font-weight: bold;
+        }
+        .checkbox-label {
+            margin-right: 15px;
+        }
+
+        /* Bagian Paraf/Tanda Tangan */
+        .paraf-section {
+            width: 100%;
+            margin-top: 20px;
+            text-align: right;
+            font-size: 14px;
+            padding-right: 20px; /* Jarak untuk tanda tangan */
+        }
+        .paraf-section p {
+            margin: 5px 0;
+        }
+
